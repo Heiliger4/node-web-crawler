@@ -1,0 +1,23 @@
+{
+  "name": "webcrawlerhttp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heiliger4/webCrawlerHttp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heiliger4/webCrawlerHttp/issues"
+  },
+  "homepage": "https://github.com/Heiliger4/webCrawlerHttp#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
