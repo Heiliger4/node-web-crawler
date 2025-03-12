@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawl Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            color: #343a40;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+        th, td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: linear-gradient(135deg, #007BFF, #0056b3);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        tr:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Add a subtle animation to the table rows */
+        tr {
+            transition: all 0.3s ease;
+        }
+        /* Add a hover effect to the table */
+        table:hover {
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+        }
+        /* Add a gradient background to the page */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.1));
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crawl Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each pages}}
+            <tr>
+                <td>{{this.url}}</td>
+                <td>{{this.count}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
